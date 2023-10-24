@@ -1,0 +1,63 @@
+main {
+    background-color: rgb(245, 245, 245);
+    position: relative;
+
+    section{
+        @include flex;
+        img{
+            width: 60%;
+            height: 60%;
+            margin-top: 3rem;
+        }
+        .decoracion {
+            background-image: radial-gradient( circle, rgb(197, 152, 96), rgb(245, 245, 245));
+        }
+        
+    }
+    div {
+        .portada{
+            img{
+                width: 100%;
+                height: 60%;
+            }
+        }
+    }
+    .img-oculta1, .img-oculta2, .texto-img, .texto-img2, .p-oculto{
+        display: none;
+    }
+
+    .mobiliario p{
+        color: rgb(70, 61, 47);
+        box-shadow:40px 40px 40px rgb(129, 95, 80);
+    }
+    
+    .usuario{
+        @include flex;
+        padding: 5rem;
+        font-size: 15px;
+        form {
+            @include flex;
+          }
+        input, textarea{
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-color: rgb(104, 65, 48);
+          }
+        .logo-contacto img{
+            width: 200px;
+            margin-top: 2rem;
+            box-shadow: 30px 40px 40px rgb(129, 95, 80) ;
+        }
+        .ubicacion{
+            @include flex;
+            iframe{
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+        }
+        
+    }
+    
+    
+}

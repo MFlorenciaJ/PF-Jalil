@@ -1,0 +1,40 @@
+body{
+    font-size: 62.5%;
+    font-family: 'Ysabeau SC', sans-serif;
+    background-color: rgb(245, 245, 245);
+    
+    a{text-decoration: none;
+        color: $tercer-color; 
+        font-size: 15px; 
+    }
+    
+    h1{
+        font-size: 45px;
+        text-align: center;
+        color: $primer-color;
+        margin-top: 7rem;
+        margin-bottom: 5rem;
+    }
+    
+    h2{
+        font-size: 30px;
+        text-align: center;
+        color: $segundo-color;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+    
+    h3{
+        font-size: 20px;
+        text-align: center;
+        color: $tercer-color;
+    }
+    
+    p{
+        font-size: 20px;
+        text-align: center;
+        margin: 1rem 2rem;
+        color: $segundo-color;
+    }
+}
+

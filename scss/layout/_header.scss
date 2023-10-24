@@ -1,0 +1,36 @@
+header {
+        .menu {
+            @include flex-header;
+            text-align: left;
+            color: $primer-color;
+            background-image: linear-gradient(rgb(197, 152, 96), rgb(245, 245, 245));  
+            font-size: 20px; 
+            padding: 30px;
+            top: 0px;
+                .encabezado{
+                        .lista{
+                            .boton-compra{
+                            background-color: rgb(253, 244, 223); 
+                            border-radius: 2rem;
+                            color: $primer-color;
+                            text-align: center;
+                                &:hover{
+                                    @include border;
+                                    }    
+                                }
+                        }
+                    }
+                div{
+                    img{
+                        .logo-nav{
+                        @include border;
+                        width: 50px;
+                        height: 50px;
+                            }
+                    }
+                }
+            }
+    }
+
+
+

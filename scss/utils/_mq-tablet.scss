@@ -1,0 +1,76 @@
+/*mq tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    //estilos main//
+    main section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,50%);
+        grid-template-areas: "productos";
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem;
+        margin-top: 5rem;
+        position: relative;
+        div {    
+            .bazar{
+                grid-area: productos;
+                }
+                img{
+                    width: 300px;
+                    height: 300px;
+                    }
+            }
+        div {
+            .decoracion{
+                grid-area: productos;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+                }
+        }
+        div{
+            .bazar-premium{
+                grid-area: productos;
+                }
+                img{
+                    width: 300px;
+                    height: 300px;
+                    }
+            }
+        div{
+            .deco-premium{
+                grid-area: productos;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .img-oculta, .h3-oculto{
+            display: none;
+        }
+    
+        .mobiliario{
+            display: flex;
+            flex-direction: column;
+            justify-content:right;
+            align-items: center;
+        }
+    
+        .logo-contacto img{
+            width: 350px;
+            height: 250px;
+        }
+    }
+    div{
+        .logo-nav{
+        width: 70px;
+        height: 70px;
+        border-radius: 5rem;
+        border: #7a5d4a solid;
+        }
+    }
+}
+
