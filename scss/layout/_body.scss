@@ -1,39 +1,22 @@
 body{
     font-size: 62.5%;
     font-family: 'Ysabeau SC', sans-serif;
-    background-color: rgb(245, 245, 245);
-    
-    a{text-decoration: none;
-        color: $tercer-color; 
-        font-size: 15px; 
-    }
-    
+    background-color: $bg-principal;
     h1{
-        font-size: 45px;
-        text-align: center;
+        @extend%h1-estilo;
         color: $primer-color;
-        margin-top: 7rem;
-        margin-bottom: 5rem;
     }
-    
     h2{
-        font-size: 30px;
-        text-align: center;
+        @extend%h2-estilo;
         color: $segundo-color;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
     }
-    
     h3{
         font-size: 20px;
         text-align: center;
         color: $tercer-color;
     }
-    
     p{
-        font-size: 20px;
-        text-align: center;
-        margin: 1rem 2rem;
+        @extend%parrafos-estilo;
         color: $segundo-color;
     }
 }

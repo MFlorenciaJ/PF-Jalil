@@ -17,10 +17,10 @@
     border-radius: 3rem;
 }
 
-@mixin grid-tablet{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2,50%);
-    grid-template-areas: "productos";
-    justify-content: center;
+@mixin boton-compra{
+    background-color: rgb(253, 244, 223); 
+    border-radius: 2rem;
+    color: $primer-color;
+    text-align: center;
+
 }

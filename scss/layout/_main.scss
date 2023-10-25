@@ -1,63 +1,88 @@
 main {
-    background-color: rgb(245, 245, 245);
+    background-color: $bg-principal;
     position: relative;
-
-    section{
-        @include flex;
-        img{
-            width: 60%;
-            height: 60%;
-            margin-top: 3rem;
+        section{
+            @include flex;
+            h1{
+                @extend%h1-estilo;
+                color: $primer-color;
+            }
+            
+            h2{
+                @extend%h2-estilo;
+                color: $segundo-color;
+            }
+                img{
+                    width: 60%;
+                    height: 60%;
+                    margin-top: 3rem;
+                }       
+                .mobiliario {
+                             p{
+                                @extend%parrafos-estilo;
+                                color: $segundo-color;
+                                box-shadow:40px 40px 40px rgb(129, 95, 80);
+                             }
+                }
+                .img-oculta1, .img-oculta2, .texto-img1, .texto-img2, .p-oculto{
+                    display: none;
+                }
         }
-        .decoracion {
-            background-image: radial-gradient( circle, rgb(197, 152, 96), rgb(245, 245, 245));
-        }
-        
-    }
-    div {
-        .portada{
-            img{
-                width: 100%;
-                height: 60%;
+        div{
+            .portada{
+                    img{
+                        height: 40%;
+                    }
             }
         }
-    }
-    .img-oculta1, .img-oculta2, .texto-img, .texto-img2, .p-oculto{
-        display: none;
-    }
-
-    .mobiliario p{
-        color: rgb(70, 61, 47);
-        box-shadow:40px 40px 40px rgb(129, 95, 80);
-    }
-    
-    .usuario{
-        @include flex;
-        padding: 5rem;
-        font-size: 15px;
-        form {
+        .usuario{
             @include flex;
-          }
-        input, textarea{
-            margin-bottom: 8px;
-            border-radius: 5px;
-            border-color: rgb(104, 65, 48);
-          }
-        .logo-contacto img{
-            width: 200px;
-            margin-top: 2rem;
-            box-shadow: 30px 40px 40px rgb(129, 95, 80) ;
-        }
+            padding: 5rem;
+            font-size: 15px;
+                form {
+                    @include flex;
+                }
+                input, textarea{
+                    margin-bottom: 8px;
+                    border-radius: 5px;
+                    border-color: rgb(104, 65, 48);
+                }
+                .logo-contacto img{
+                    width: 200px;
+                    margin-top: 2rem;
+                    box-shadow: 30px 40px 40px rgb(129, 95, 80) ;
+                }
+        }        
+        
         .ubicacion{
             @include flex;
-            iframe{
-                margin-top: 1rem;
-                margin-bottom: 2rem;
-                padding: 1rem;
+                iframe{
+                    margin-top: 1rem;
+                    margin-bottom: 2rem;
+                    padding: 1rem;
+                }
+                a{
+                    display: none;
+                }
+        }
+
+        .menu{
+            form{
+                .eleccion{
+                    select:hover{
+                        background-color: $bg-formulario;
+                    }
+                }
             }
         }
-        
-    }
-    
-    
 }
+
+    .medios{
+        form{
+            .eleccion{
+                select:hover{
+                    background-color: $bg-formulario;
+                }
+            }
+        }
+    }

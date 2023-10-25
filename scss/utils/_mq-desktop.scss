@@ -1,6 +1,24 @@
 @media screen and (min-width: 1024px){
     
-    main section {
+    /*responsive navegador*/
+    header{
+        div{
+            .logo-nav{
+                width: 100px;
+                height: 100px;
+                border-radius: 5rem;
+                border: #7a5d4a solid;
+                &:hover {
+                    transform: scale(2);
+                }
+            }   
+        }
+    }
+    
+    /*responsive bazar y deco*/
+
+    main{
+        section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2,50%);
@@ -11,30 +29,12 @@
         padding: 3rem;
         margin-top: 5rem;
         position: relative;
-        div {
-            .bazar{
-                grid-area: productos;
-                }
-            .decoracion{
-                grid-area: productos;
-                }
-            .bazar-premium{
-                grid-area: productos;
-                }
-            .deco-premium{
+            div{
+                .bazar, .deco, .bazar-premium, .deco-premium{
                     grid-area: productos;
                 }
-            }
-            .bazar img, .deco img, .bazar-premium img, .deco-premium img{
-                width: 400px;
-                height: 400px;
-                &:hover{
-                    transform: rotateY(180deg);
-                    opacity: 0.2;
-                    filter: blur(2px), grayscale(20%);
-                }
-                }
-                .texto-img {
+                
+                .texto-img1, .texto-img2 {
                     display: block;
                     font-size: 15px;
                     position: relative;
@@ -48,124 +48,118 @@
                     opacity: 0;
                     color: black;
                     padding: 10px;  
-                    :hover{
-                        opacity: 1;
-                    }
-                    }
-                    .texto-img2{
-                        display: block;
-                        font-size: 15px;
-                        position: relative;
-                        text-align: center;
-                        border-radius: 6px;
-                        box-shadow: 0px 15px 25px rgb(104, 65, 48);
-                        top: 50%;
-                        left: 50%;
-                        margin-top: 3rem;
-                        transform: translate(-50%, -50%);
-                        opacity: 0;
-                        color: black;
-                        padding: 10px;
-                        :hover{
-                        opacity: 1;
-                    }
-                    }
-                    .deco:hover img{
-                        transform: rotateY(180deg);
-                        opacity: 0.2;
-                        filter: blur(2px), grayscale(20%);
-                    }
-                    .deco-premium:hover img{
-                        transform: rotateY(180deg);
-                        opacity: 0.2;
-                        filter: blur(2px), grayscale(20%);
-                    }
-                
-                    .deco-premium, .deco:hover .texto-img2{
-                        opacity: 1;
-                
-                    }
-                    .mobiliario img{
-                        width: 400px;
-                        height: 400px;
-                    }
-
-    }
-
-    div{
-        .logo-nav{
-        width: 100px;
-        height: 100px;
-        border-radius: 5rem;
-        border: #7a5d4a solid;
-        &:hover {
-            transform: scale(2);
+                }
             }
-        }
-    }
-
-    .proceso img{
-        width: 80%;
-        height: 80%;
-        margin: 5rem 5rem 1rem 5rem;
-    }
-
-    .proceso{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 3rem;
-        div .proceso-tablas{
-            grid-column: 1;
-            grid-row: 1;
-        }
-        div .proceso-maquinas{
-            grid-column: 2;
-            grid-row: 2;
-        }
-        .img-oculta2{
-            display: block;
-            grid-column: 1;
-            grid-row: 2;
-        }
-        .img-oculta1{
-            display: block;
-            grid-column: 2;
-            grid-row: 1;
-        }
-        .p-oculto{
-            display: block;
-        }
-    }
-
-    /*responsive contacto*/
-
-
-    .wsp{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        h4{
-            display: block;
-            font-size: 20px;
-            margin-top: 2rem;
-        }
-            img{
-                width: 60px;
-                height: 60px;
-                position: fixed;
-                bottom: 20px;
-                right:30px;
+            .bazar img, .deco img, .bazar-premium img, .deco-premium img{
+                width: 400px;
+                height: 400px;
                 &:hover{
-                    transform: scale(2);
+                transform: rotateY(180deg);
+                opacity: 0.2;
+                filter: blur(2px), grayscale(20%);
+                } 
+            }
+            .bazar, .deco, .bazar-premium, .deco-premium {
+                &:hover {
+                  .texto-img1, .texto-img2 {
+                    opacity: 1;
+                  }
                 }
             }
         }
 
-    .redes img{
-        width: 60px;
-        height: 60px;
-    }
+        /*responsive contacto*/
+        .usuario{
+            .logo-contacto img{
+            width: 600px;
+            height: 400px;
+            }            
+        }
 
-}
+        .ubicacion{
+                .map-contenedor{
+                    position: relative;
+                        .map-link{
+                            display: block;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 10px;
+                            background-color: white;
+                            padding: 5px;
+                            border: 1px solid #ccc;
+                            z-index: 1;
+                            text-decoration: none;
+                        }
+                }
+        }
+
+        /*responsive presentacion*/
+        .proceso{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 3rem;
+            div .proceso-tablas{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            div .proceso-maquinas{
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .img-oculta2{
+                display: block;
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .img-oculta1{
+                display: block;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .p-oculto{
+                display: block;
+            }
+        }
+        .proceso img{
+        width: 80%;
+        height: 80%;
+        margin: 5rem 5rem 1rem 5rem;
+        }
+
+    }
+    
+
+
+
+    /*responsive footer*/
+    footer{
+            .wsp{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                h4{
+                    display: block;
+                    font-size: 20px;
+                    margin-top: 2rem;
+                }
+                img{
+                    width: 70px;
+                    height: 70px;
+                    position: fixed;
+                    bottom: 20px;
+                    right:30px;
+                    &:hover{
+                        transform: scale(2);
+                    }
+                }
+            }
+            .redes {
+                img{
+                width: 60px;
+                height: 60px;
+                }
+            }
+        }
+    }

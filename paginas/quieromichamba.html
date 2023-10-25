@@ -20,60 +20,60 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg menu">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="productos.html">PRODUCTOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="premium.html">PREMIUM</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">CONTACTO</a>
-                  </li>
-                  <li class="nav-item boton-compra">
-                    <a class="nav-link" href="quieromichamba.html">QUIERO MI CHAMBA</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <div>
-            <img src="../multimedia/logo.jpg" alt="Logo" class="logo-nav">
+  <header>
+    <nav class="navbar navbar-expand-lg menu">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse encabezado" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 lista">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">PRODUCTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="premium.html">PREMIUM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">CONTACTO</a>
+              </li>
+              <li class="nav-item boton-compra">
+                <a class="nav-link" href="quieromichamba.html">QUIERO MI CHAMBA</a>
+              </li>
+            </ul>
           </div>
-    </header>
+        </div>
+      </nav>
+      <div>
+        <img src="../multimedia/logo.jpg" alt="Logo" class="logo-nav">
+      </div>
+</header>
 
     <main>
       <h1>ELEGÍ TU CHAMBA Y SUMALO A TU HOGAR</h1>
-        <div class="container mt-5">
+        <div class="container mt-5 menu">
           <form>
             <!-- listado de producto -->
-            <div class="mb-3 menu">
+            <div class="mb-3 eleccion">
                 <label for="producto1" class="form-label">Nuestros Productos</label>
                   <select class="form-select" id="producto1" name="producto1">
                     <option value="seleccion">Elegí tu producto</option>
-                    <option value="opcion1">Tabla con Espacio para Guarnicion</option>
-                    <option value="opcion2">Tabla Lisa</option>
-                    <option value="opcion3">Tabla de Servir</option>
-                    <option value="opcion4">Pizzera Redonda</option>
-                    <option value="opcion5">Pizzera Cuadrada</option>
-                    <option value="opcion6">Tabla Picada</option>
-                    <option value="opcion7">Tablalita Redonda</option>
+                    <option value="option">Tabla con Espacio para Guarnicion</option>
+                    <option value="option">Tabla Lisa</option>
+                    <option value="option">Tabla de Servir</option>
+                    <option value="option">Pizzera Redonda</option>
+                    <option value="option">Pizzera Cuadrada</option>
+                    <option value="option">Tabla Picada</option>
+                    <option value="option">Tablalita Redonda</option>
                  </select>
             </div>
     
             <!-- cantidad de productos-->
-            <div class="mb-3">
+            <div class="mb-3 eleccion">
               <label for="producto2" class="form-label">¿Cuántos vas a llevar?</label>
                 <select class="form-select" id="cantidad-productos" name="Cantidad">
                     <option value="opcion1">1</option>
@@ -94,7 +94,7 @@
     <div class="container mt-5 medios">
       <form>
         <!-- medios de pago -->
-          <div class="mb-3">
+          <div class="mb-3 eleccion">
               <label for="medios-pago" class="form-label">ELEGÍ TU MEDIO DE PAGO</label>
                 <select class="form-select" id="medios-pago" name="medios">
                 <option value="seleccion"></option>
@@ -107,7 +107,7 @@
     
       <form>
         <!-- medios de envío -->
-        <div class="mb-3 envios">
+        <div class="mb-3 eleccion">
             <label for="medios-envio" class="form-label">MEDIOS DE ENVÍO</label>
               <select class="form-select" id="medios-envio" name="envio">
               <option value="seleccion"></option>

@@ -4,20 +4,15 @@ footer{
     color:$tercer-color; 
     font-size: 20px;
     padding: 20px;
-    position: relative;
-    h4 {
+    position: relative;  
+    .redes {
+            img{
+            width: 40px;
+            height: 40px;
+            margin-top: 2rem;
+                }
+        }  
+    .wsp {
         display: none;
     }
-    .redes img{
-        width: 40px;
-        height: 40px;
-        margin-top: 2rem;
-    }   
-    .wsp img{
-        width: 70px;
-        height: 60px;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-        
 }

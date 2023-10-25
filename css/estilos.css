@@ -3,6 +3,23 @@
   padding: 0;
   box-sizing: border-box; }
 
+body h1, main section h1 {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 5rem; }
+
+body h2, main section h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem; }
+
+body p, main section .mobiliario p {
+  font-size: 20px;
+  text-align: center;
+  margin: 1rem 2rem; }
+
 a {
   text-decoration: none;
   color: #4b3b22;
@@ -12,33 +29,18 @@ body {
   font-size: 62.5%;
   font-family: 'Ysabeau SC', sans-serif;
   background-color: whitesmoke; }
-  body a {
-    text-decoration: none;
-    color: #4b3b22;
-    font-size: 15px; }
   body h1 {
-    font-size: 45px;
-    text-align: center;
-    color: #3f3320;
-    margin-top: 7rem;
-    margin-bottom: 5rem; }
+    color: #3f3320; }
   body h2 {
-    font-size: 30px;
-    text-align: center;
-    color: #695739;
-    margin-bottom: 3rem;
-    margin-top: 3rem; }
+    color: #695739; }
   body h3 {
     font-size: 20px;
     text-align: center;
     color: #4b3b22; }
   body p {
-    font-size: 20px;
-    text-align: center;
-    margin: 1rem 2rem;
     color: #695739; }
 
-header .menu {
+header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -57,7 +59,7 @@ header .menu {
     header .menu .encabezado .lista .boton-compra:hover {
       border: #7a5d4a solid;
       border-radius: 3rem; }
-  header .menu div img .logo-nav {
+  header div .logo-nav {
     border: #7a5d4a solid;
     border-radius: 3rem;
     width: 50px;
@@ -71,20 +73,21 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center; }
+    main section h1 {
+      color: #3f3320; }
+    main section h2 {
+      color: #695739; }
     main section img {
       width: 60%;
       height: 60%;
       margin-top: 3rem; }
-    main section .decoracion {
-      background-image: radial-gradient(circle, #c59860, whitesmoke); }
+    main section .mobiliario p {
+      color: #695739;
+      box-shadow: 40px 40px 40px #815f50; }
+    main section .img-oculta1, main section .img-oculta2, main section .texto-img1, main section .texto-img2, main section .p-oculto {
+      display: none; }
   main div .portada img {
-    width: 100%;
-    height: 60%; }
-  main .img-oculta1, main .img-oculta2, main .texto-img, main .texto-img2, main .p-oculto {
-    display: none; }
-  main .mobiliario p {
-    color: #463d2f;
-    box-shadow: 40px 40px 40px #815f50; }
+    height: 40%; }
   main .usuario {
     display: flex;
     flex-direction: column;
@@ -105,15 +108,22 @@ main {
       width: 200px;
       margin-top: 2rem;
       box-shadow: 30px 40px 40px #815f50; }
-    main .usuario .ubicacion {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center; }
-      main .usuario .ubicacion iframe {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        padding: 1rem; }
+  main .ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    main .ubicacion iframe {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      padding: 1rem; }
+    main .ubicacion a {
+      display: none; }
+  main .menu form .eleccion select:hover {
+    background-color: rgba(255, 238, 226, 0.904); }
+
+.medios form .eleccion select:hover {
+  background-color: rgba(255, 238, 226, 0.904); }
 
 footer {
   display: flex;
@@ -125,17 +135,12 @@ footer {
   font-size: 20px;
   padding: 20px;
   position: relative; }
-  footer h4 {
-    display: none; }
   footer .redes img {
     width: 40px;
     height: 40px;
     margin-top: 2rem; }
-  footer .wsp img {
-    width: 70px;
-    height: 60px;
-    margin-top: 2rem;
-    margin-bottom: 1rem; }
+  footer .wsp {
+    display: none; }
 
 /*mq tablet*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -180,134 +185,120 @@ footer {
     main section .logo-contacto img {
       width: 350px;
       height: 250px; }
-  div .logo-nav {
+  /*resposive footer*/
+  footer div .logo-nav {
     width: 70px;
     height: 70px;
     border-radius: 5rem;
     border: #7a5d4a solid; } }
 
 @media screen and (min-width: 1024px) {
-  main section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 50%);
-    grid-template-areas: "productos";
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 3rem;
-    margin-top: 5rem;
-    position: relative; }
-    main section div .bazar {
-      grid-area: productos; }
-    main section div .decoracion {
-      grid-area: productos; }
-    main section div .bazar-premium {
-      grid-area: productos; }
-    main section div .deco-premium {
-      grid-area: productos; }
-    main section .bazar img, main section .deco img, main section .bazar-premium img, main section .deco-premium img {
-      width: 400px;
-      height: 400px; }
-      main section .bazar img:hover, main section .deco img:hover, main section .bazar-premium img:hover, main section .deco-premium img:hover {
-        transform: rotateY(180deg);
-        opacity: 0.2;
-        filter: blur(2px), grayscale(20%); }
-    main section .texto-img {
-      display: block;
-      font-size: 15px;
-      position: relative;
-      text-align: center;
-      border-radius: 6px;
-      box-shadow: 0px 15px 25px #684130;
-      top: 50%;
-      left: 50%;
-      margin-top: 3rem;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      color: black;
-      padding: 10px; }
-      main section .texto-img :hover {
-        opacity: 1; }
-    main section .texto-img2 {
-      display: block;
-      font-size: 15px;
-      position: relative;
-      text-align: center;
-      border-radius: 6px;
-      box-shadow: 0px 15px 25px #684130;
-      top: 50%;
-      left: 50%;
-      margin-top: 3rem;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      color: black;
-      padding: 10px; }
-      main section .texto-img2 :hover {
-        opacity: 1; }
-    main section .deco:hover img {
-      transform: rotateY(180deg);
-      opacity: 0.2;
-      filter: blur(2px), grayscale(20%); }
-    main section .deco-premium:hover img {
-      transform: rotateY(180deg);
-      opacity: 0.2;
-      filter: blur(2px), grayscale(20%); }
-    main section .deco-premium, main section .deco:hover .texto-img2 {
-      opacity: 1; }
-    main section .mobiliario img {
-      width: 400px;
-      height: 400px; }
-  div .logo-nav {
+  /*responsive navegador*/
+  header div .logo-nav {
     width: 100px;
     height: 100px;
     border-radius: 5rem;
     border: #7a5d4a solid; }
-    div .logo-nav:hover {
+    header div .logo-nav:hover {
       transform: scale(2); }
-  .proceso img {
-    width: 80%;
-    height: 80%;
-    margin: 5rem 5rem 1rem 5rem; }
-  .proceso {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3rem; }
-    .proceso div .proceso-tablas {
-      grid-column: 1;
-      grid-row: 1; }
-    .proceso div .proceso-maquinas {
-      grid-column: 2;
-      grid-row: 2; }
-    .proceso .img-oculta2 {
-      display: block;
-      grid-column: 1;
-      grid-row: 2; }
-    .proceso .img-oculta1 {
-      display: block;
-      grid-column: 2;
-      grid-row: 1; }
-    .proceso .p-oculto {
-      display: block; }
-  /*responsive contacto*/
-  .wsp {
+  /*responsive bazar y deco*/
+  
+    /*responsive contacto*/
+    /*responsive presentacion*/
+    main section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 50%);
+      grid-template-areas: "productos";
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem;
+      margin-top: 5rem;
+      position: relative; }
+      main section div .bazar, main section div .deco, main section div .bazar-premium, main section div .deco-premium {
+        grid-area: productos; }
+      main section div .texto-img1, main section div .texto-img2 {
+        display: block;
+        font-size: 15px;
+        position: relative;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px #684130;
+        top: 50%;
+        left: 50%;
+        margin-top: 3rem;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        color: black;
+        padding: 10px; }
+      main section .bazar img, main section .deco img, main section .bazar-premium img, main section .deco-premium img {
+        width: 400px;
+        height: 400px; }
+        main section .bazar img:hover, main section .deco img:hover, main section .bazar-premium img:hover, main section .deco-premium img:hover {
+          transform: rotateY(180deg);
+          opacity: 0.2;
+          filter: blur(2px), grayscale(20%); }
+      main section .bazar:hover .texto-img1, main section .bazar:hover .texto-img2, main section .deco:hover .texto-img1, main section .deco:hover .texto-img2, main section .bazar-premium:hover .texto-img1, main section .bazar-premium:hover .texto-img2, main section .deco-premium:hover .texto-img1, main section .deco-premium:hover .texto-img2 {
+        opacity: 1; }
+    main .usuario .logo-contacto img {
+      width: 600px;
+      height: 400px; }
+    main .ubicacion .map-contenedor {
+      position: relative; }
+      main .ubicacion .map-contenedor .map-link {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: white;
+        padding: 5px;
+        border: 1px solid #ccc;
+        z-index: 1;
+        text-decoration: none; }
+    main .proceso {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 3rem; }
+      main .proceso div .proceso-tablas {
+        grid-column: 1;
+        grid-row: 1; }
+      main .proceso div .proceso-maquinas {
+        grid-column: 2;
+        grid-row: 2; }
+      main .proceso .img-oculta2 {
+        display: block;
+        grid-column: 1;
+        grid-row: 2; }
+      main .proceso .img-oculta1 {
+        display: block;
+        grid-column: 2;
+        grid-row: 1; }
+      main .proceso .p-oculto {
+        display: block; }
+    main .proceso img {
+      width: 80%;
+      height: 80%;
+      margin: 5rem 5rem 1rem 5rem; }
+  /*responsive footer*/
+  footer .wsp {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center; }
-    .wsp h4 {
+    footer .wsp h4 {
       display: block;
       font-size: 20px;
       margin-top: 2rem; }
-    .wsp img {
-      width: 60px;
-      height: 60px;
+    footer .wsp img {
+      width: 70px;
+      height: 70px;
       position: fixed;
       bottom: 20px;
       right: 30px; }
-      .wsp img:hover {
+      footer .wsp img:hover {
         transform: scale(2); }
-  .redes img {
+  footer .redes img {
     width: 60px;
     height: 60px; } }
